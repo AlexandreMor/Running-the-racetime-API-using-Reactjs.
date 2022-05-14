@@ -1,3 +1,9 @@
+# Why was this app created ?
+
+This app was created in order to allow the user to collect data from players registered on the https://racetime.gg site to compare their statistics.
+You need to enter two valid usernames and their associated scrims. You can set a date to only collect data from that date until today.
+Keep in mind that this site only collects data from races played on Ocarina of Time Randomizer with the standard ruleset.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

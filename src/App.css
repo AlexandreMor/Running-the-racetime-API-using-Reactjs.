@@ -1,19 +1,5 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -28,11 +14,86 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
+.label {
+  font-size:20px;
+  margin-right:10px;
+}
+
+.inputs {
+  display:flex;
+  justify-content: center;
+}
+
+.field {
+  height:30%;
+  font-size:15px;
+}
+
+.hashtag {
+  margin-top:0;
+  margin-left:5px;
+  margin-right:5px;
+  margin-bottom:0;
+  font-size: 15px;
+}
+.main {
+  display: flex;
+  justify-content: center;
+}
+.form {
+display:flex;
+flex-direction: column;
+justify-content: center;
+}
+button {
+  width: 10%;
+}
+table
+{
+    border-collapse: collapse; 
+}
+td, th
+{
+    border: 1px solid white; 
+    padding-left:5px;
+    padding-right:5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size:25px;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
