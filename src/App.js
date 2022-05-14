@@ -13,7 +13,7 @@ function App() {
 
   const [date, setDate] = useState(null);
 
-  const proxy = "http://127.0.0.1:8080/https://racetime.gg/";
+  const url = "https://racetime.gg/";
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -53,7 +53,7 @@ function App() {
         }));
         //We are collecting the ids of each player.
         const reqId = axios.get(
-          proxy + `user/search/?name=${username}&scrim=${userscrim}`
+          url + `user/search/?name=${username}&scrim=${userscrim}`
         );
         const resId = await reqId;
         const id = resId.data.results[0].id;
@@ -63,7 +63,7 @@ function App() {
         }));
         //With these ids we can get the list of races he has participated in.
         //The races array can only hold ten races at a time, so we need to loop through the number of pages to get them all.
-        const reqNumPages = axios.get(proxy + `user/${id}/races/data`);
+        const reqNumPages = axios.get(url + `user/${id}/races/data`);
         const resNumPages = await reqNumPages;
         const numPages = resNumPages.data.num_pages;
         const ootRaces = [];
@@ -71,7 +71,7 @@ function App() {
 
         for (let i = 1; i < numPages; i++) {
           const resRaces = await axios.get(
-            proxy + `user/${id}/races/data?page=${i}`
+            url + `user/${id}/races/data?page=${i}`
           );
           const dataRaces = await resRaces.data.races;
           //We only get the races from the date desired by the user till today.
@@ -93,7 +93,7 @@ function App() {
         //These loops allow us to count the number of podium places for each player.
         if (ootRaces.length !== 0) {
           for (let i = 0; i < ootRaces.length; i++) {
-            const reqStats = await axios.get(proxy + ootRaces[i] + `/data`);
+            const reqStats = await axios.get(url + ootRaces[i] + `/data`);
             const resStats = reqStats;
             const entrants = await resStats.data.entrants;
             for (let j = 0; j < entrants.length; j++) {
@@ -172,7 +172,7 @@ function App() {
 
       //By comparing the place of the players on each race, we can award them a victory (or not if both players have forfeited)
       for (let i = 0; i < res.length; i++) {
-        const request2 = axios.get(proxy + res[i] + `/data`);
+        const request2 = axios.get(url + res[i] + `/data`);
         const res2 = await request2;
         const data2 = res2.data;
         let user1Index = data2.entrants.findIndex(
