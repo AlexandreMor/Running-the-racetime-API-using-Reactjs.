@@ -13,7 +13,7 @@ function App() {
 
   const [date, setDate] = useState(null);
 
-  const url = "/api/";
+  const url = "https://incandescent-madeleine-28c9b7.netlify.app/api/";
 
   const handleChange = (e) => {
     e.preventDefault();
