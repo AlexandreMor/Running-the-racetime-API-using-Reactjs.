@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "cors-proxy/*"
-  to = "https://incandescent-madeleine-28c9b7.netlify.app/"
+  from = "/*"
+  to = "https://incandescent-madeleine-28c9b7.netlify.app/:splat"
   status = 200
   force = true
