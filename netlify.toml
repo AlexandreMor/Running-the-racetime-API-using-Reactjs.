@@ -1,5 +1,2 @@
-[[redirects]]
-  from = "/*"
-  to = "https://incandescent-madeleine-28c9b7.netlify.app/:splat"
-  status = 200
-  force = true
+[build]
+  functions = "netlify_functions"
