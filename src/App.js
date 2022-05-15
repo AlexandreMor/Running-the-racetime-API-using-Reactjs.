@@ -13,7 +13,7 @@ function App() {
 
   const [date, setDate] = useState(null);
 
-  const url = "https://racetime.gg/";
+  const url = "/api/";
 
   const handleChange = (e) => {
     e.preventDefault();
