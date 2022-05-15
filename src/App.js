@@ -13,7 +13,7 @@ function App() {
 
   const [date, setDate] = useState(null);
 
-  const url = "https://racetime.gg/";
+  const url = "/cors-proxy/https://racetime.gg/";
 
   const handleChange = (e) => {
     e.preventDefault();
