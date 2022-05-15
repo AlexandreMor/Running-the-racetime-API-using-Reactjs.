@@ -55,6 +55,7 @@ function App() {
         const reqId = axios.get(
           url + `user/search/?name=${username}&scrim=${userscrim}`
         );
+        console.log(reqId)
         const resId = await reqId;
         const id = resId.data.results[0].id;
         setter((prevState) => ({
