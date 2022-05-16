@@ -13,7 +13,7 @@ function App() {
 
   const [date, setDate] = useState(null);
 
-  const url = "/api/";
+  const url = "https://proxyracetime.herokuapp.com/https://racetime.gg/";
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -55,7 +55,6 @@ function App() {
         const reqId = axios.get(
           url + `user/search/?name=${username}&scrim=${userscrim}`
         );
-        console.log(reqId)
         const resId = await reqId;
         const id = resId.data.results[0].id;
         setter((prevState) => ({
